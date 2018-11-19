@@ -1,0 +1,70 @@
+@import "~src/variables";
+
+/// Description design of user interface
+
+header {
+  height: $header-height;
+  background: $header-bg;
+  padding: $header-padding;
+}
+
+main {
+  background: $main-bg;
+  min-height: $main-min-height;
+  padding-top: $main-pdt;
+}
+
+aside {
+  background: $sidenav-bg;
+  width: $sidenav-width;
+  min-height: $sidenav-min-height;
+  position: fixed;
+  z-index: 1000;
+  .scroller {
+    overflow-y: auto;
+    max-height: $scroller-max-height;
+    padding-bottom: $scroller-pdb;
+  }
+}
+
+.close-aside aside {
+  width: 0;
+  overflow: hidden;
+}
+
+.shadow {
+  background: $shadow-bg;
+  width: $shadow-width;
+  min-height: $shadow-min-height;
+  z-index: 1000;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: $main-min-height;
+}
+
+.contents {
+  flex-grow: 1;
+}
+
+
+footer {
+  background: $footer-bg;
+}
+
+@media (min-width: $md-breakpoint) {
+  .shadow {
+    display: none;
+  }
+  .contents, footer {
+    margin-left: $sidenav-width;
+  }
+
+  .close-aside .contents,
+  .close-aside footer {
+    margin-left: 0;
+  }
+
+}

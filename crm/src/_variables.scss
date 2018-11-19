@@ -1,0 +1,47 @@
+// breakpoints
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;
+
+// colors
+$light-color: #ffffff;
+$dark-color: #131313;
+$palette-color-one: #00a1e5;
+$palette-color-two: #e2445c;
+$palette-color-three: #fdab3d;;
+$palette-color-four: #00c875;
+
+// gutters
+$gutter: 15px;
+
+// header
+$header-height: 65px;
+$header-bg: $light-color;
+$header-padding: 0 $gutter;
+
+// main
+$main-pdt: 65px;
+$main-min-height: calc(100vh - 65px);
+$main-bg: darken($light-color, 5);
+
+// sidenav
+$sidenav-width: 250px;
+$sidenav-min-height: 100vh;
+$sidenav-bg: darken($light-color, 10);
+
+// scroller
+$scroller-max-height: 100vh;
+$scroller-pdb: $header-height;
+
+// shadow
+$shadow-width: 100%;
+$shadow-min-height: 100vh;
+$shadow-bg: rgba($dark-color, .8);
+
+// footer
+$footer-bg: $light-color;
+
+// icons
+$fa-icons-fz: 1.2rem;
+$fa-icons-color: $dark-color;
