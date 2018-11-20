@@ -1,6 +1,13 @@
 
 Todo:
   ✔ breackpoints et explain bootstrap 4 and grilles @started(18-11-19 15:59) @done(18-11-19 15:59) @lasted(48s)
-  ☐ système de grilles et goutières
-  ☐ lyfe clicle hooks
+  ✔ système de grilles et goutières @done(18-11-20 09:11)
+  ✔ lyfe clicle hooks @done(18-11-20 12:07)
   ✔ icons librarie @done(18-11-19 16:49)
+
+  ☐ create PageNotFoundModule
+  ☐ create pages folder
+  ☐ pages > PageNotFoundComponent
+  ☐ app-routing, create route ** -> loadChildren PageNotFoundModule
+  ☐ create PageNotFoundRoutingModule
+  ☐ -> add route ** component: PageNotFoundComponent

@@ -1,0 +1,9 @@
+<tr>
+  <td>{{ item.typePresta }}</td>
+  <td>{{ item.client }}</td>
+  <td>{{ item.nbJours }}</td>
+  <td>{{ item.tjmHt }}</td>
+  <td>{{ item | total }}</td>
+  <td>{{ item | total: item.tauxTva }}</td>
+  <td>{{ item.state }}</td>
+</tr>
