@@ -1,13 +1,24 @@
 @import '~src/variables';
 
 .tab-list {
-  .state-annule {
+  .state-annule,
+  .state-inactif {
     background: $palette-color-two;
   }
   .state-option {
     background: $palette-color-three;
   }
-  .state-confirme {
+  .state-confirme,
+  .state-actif {
     background: $palette-color-four;
   }
+}
+
+app-template-a app-tableau thead tr {
+  background: $dark-color;
+  color: $light-color;
+}
+app-template-b app-tableau thead tr {
+  background: $palette-color-one;
+  color: $light-color;
 }
