@@ -1,0 +1,13 @@
+@import '~src/variables';
+
+.tab-list {
+  .state-annule {
+    background: $palette-color-two;
+  }
+  .state-option {
+    background: $palette-color-three;
+  }
+  .state-confirme {
+    background: $palette-color-four;
+  }
+}
