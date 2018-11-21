@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   public title: string;
   public faUser = faUser;
   public faBars = faBars;
+  public open = true;
   constructor() { }
 
   ngOnInit() {
