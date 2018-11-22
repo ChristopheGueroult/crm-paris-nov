@@ -9,7 +9,7 @@ import { TotalPipe } from './pipes/total.pipe';
 
 @NgModule({
   declarations: [TotalPipe, TableauComponent, StateDirective, AddRowComponent],
-  exports: [TotalPipe, TableauComponent, StateDirective, AddRowComponent],
+  exports: [TotalPipe, TableauComponent, StateDirective, AddRowComponent, FontAwesomeModule],
   imports: [
     CommonModule,
     FontAwesomeModule,

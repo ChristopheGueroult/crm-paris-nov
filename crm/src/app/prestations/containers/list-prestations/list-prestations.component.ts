@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PrestationService } from '../../services/prestation.service';
 import { Prestation } from 'src/app/shared/models/prestation.model';
+import { Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-prestations',
@@ -8,16 +9,18 @@ import { Prestation } from 'src/app/shared/models/prestation.model';
   styleUrls: ['./list-prestations.component.scss']
 })
 
-export class ListPrestationsComponent implements OnInit {
-  public collection: Prestation[];
+export class ListPrestationsComponent implements OnInit, OnDestroy {
+  // public collection: Prestation[];
+  public collection$: Observable<Prestation[]>;
   public headers: string[];
+  // private sub: Subscription;
   constructor(
     private ps: PrestationService,
   ) {
   }
 
   ngOnInit() {
-    this.collection = this.ps.collection;
+    this.collection$ = this.ps.collection$;
     this.headers = [
       'type',
       'client',
@@ -26,7 +29,12 @@ export class ListPrestationsComponent implements OnInit {
       'total HT',
       'total TTC',
       'state',
+      'delete'
     ];
+  }
+
+  ngOnDestroy() {
+    // this.sub.unsubscribe();
   }
 
 }

@@ -4,11 +4,11 @@ export const fakeClients: Client[] = [
   new Client({
     id: 'mlkj',
     nom: 'Formation',
-    email: 'Modis',
+    email: 'test@modis.fr',
   }),
   new Client({
     id: 'dfh',
     nom: 'Coaching',
-    email: 'Nemesys',
+    email: 'tonton@nemesys.com',
   }),
 ];

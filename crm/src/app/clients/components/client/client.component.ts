@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Client } from 'src/app/shared/models/client.model';
 import { StateClient } from 'src/app/shared/enums/state-client.enum';
 import { ClientService } from '../../services/client.service';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-client',
@@ -10,8 +11,9 @@ import { ClientService } from '../../services/client.service';
 })
 export class ClientComponent implements OnInit {
 
-  @Input() item: Client;
   public states = Object.values(StateClient);
+  public faTrashAlt = faTrashAlt;
+  @Input() item: Client;
   constructor(
     private cs: ClientService
   ) {
@@ -24,6 +26,12 @@ export class ClientComponent implements OnInit {
   public changeState(event) {
     const state = event.target.value;
     this.cs.update(this.item, state);
+  }
+
+  public delete() {
+    this.cs.delete(this.item).then((data) => {
+      // gérer réponse de l'api
+    });
   }
 
 }

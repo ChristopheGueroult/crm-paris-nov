@@ -2,7 +2,8 @@
 
   <div>
     <span (click)="open = !open;">
-      <fa-icon [icon]="faBars"></fa-icon>
+      <fa-icon *ngIf="!open" [icon]="faBars"></fa-icon>
+      <fa-icon *ngIf="open" [icon]="faTimes"></fa-icon>
     </span>
   </div>
 
