@@ -1,0 +1,40 @@
+<div class="container">
+    <form novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="type">type</label>
+        <input formControlName="typePresta" type="text" class="form-control" id="type">
+        <div class="alert alert-danger" *ngIf="isError('typePresta')">champ invalid</div>
+      </div>
+
+      <div class="form-group">
+        <label for="client">client</label>
+        <input formControlName="client" type="text" class="form-control" id="client">
+        <div class="alert alert-danger" *ngIf="isError('client')">champ invalid</div>
+      </div>
+
+      <div class="form-group">
+        <label for="nbjours">nbjours</label>
+        <input formControlName="nbJours" type="number" class="form-control" id="nbjours">
+      </div>
+
+      <div class="form-group">
+        <label for="tjmht">tjmht</label>
+        <input formControlName="tjmHt" type="number" class="form-control" id="tjmht">
+      </div>
+
+      <div class="form-group">
+        <label for="tva">tva</label>
+        <input formControlName="tauxTva" type="number" class="form-control" id="tva">
+      </div>
+
+      <div class="form-group">
+        <label for="state">state</label>
+        <select formControlName="state" class="form-control" id="state">
+          <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+        </select>
+      </div>
+
+      <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
