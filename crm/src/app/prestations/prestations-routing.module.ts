@@ -4,6 +4,8 @@ import { ClientDetailPrestationComponent } from './components/client-detail-pres
 import { DetailPrestationComponent } from './components/detail-prestation/detail-prestation.component';
 import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add-prestation.component';
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
+import { PageEditPrestationComponent } from './pages/page-edit-prestation/page-edit-prestation.component';
+import { PrestationResolverService } from './services/prestation-resolver.service';
 
 const appRoutes: Routes = [
   {
@@ -15,6 +17,11 @@ const appRoutes: Routes = [
     ]
   },
   { path: 'add', component: PageAddPrestationComponent },
+  {
+    path: 'edit/:id',
+    component: PageEditPrestationComponent,
+    resolve: { item: PrestationResolverService }
+  },
 ];
 
 @NgModule({

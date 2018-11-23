@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 import { State } from 'src/app/shared/enums/state.enum';
 import { PrestationService } from '../../services/prestation.service';
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -14,6 +14,7 @@ export class PrestationComponent implements OnInit {
   @Input() item: Prestation;
   public states = Object.values(State);
   public faTrashAlt = faTrashAlt;
+  public faPencilAlt = faPencilAlt;
   constructor(
     private ps: PrestationService,
     private router: Router,
@@ -51,6 +52,10 @@ export class PrestationComponent implements OnInit {
     this.ps.item$.next(this.item);
     // console.log(this.ps.presta$.value);
     this.router.navigate(['detail'], {relativeTo: this.ar});
+  }
+
+  public edit() {
+    this.router.navigate(['edit', this.item.id], {relativeTo: this.ar});
   }
 
 }

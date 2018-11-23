@@ -29,7 +29,8 @@ export class ListPrestationsComponent implements OnInit, OnDestroy {
       'total HT',
       'total TTC',
       'state',
-      'delete'
+      'delete',
+      'edit'
     ];
   }
 

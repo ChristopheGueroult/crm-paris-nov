@@ -13,10 +13,12 @@ import { PagePrestationsComponent } from './pages/page-prestations/page-prestati
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { DetailPrestationComponent } from './components/detail-prestation/detail-prestation.component';
 import { ClientDetailPrestationComponent } from './components/client-detail-prestation/client-detail-prestation.component';
+import { PageEditPrestationComponent } from './pages/page-edit-prestation/page-edit-prestation.component';
+import { EditPrestationComponent } from './containers/edit-prestation/edit-prestation.component';
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
-  declarations: [PagePrestationsComponent, ListPrestationsComponent, PrestationComponent, PageAddPrestationComponent, AddPrestationComponent, FormPrestationComponent, ReactiveFormPrestationComponent, DetailPrestationComponent, ClientDetailPrestationComponent],
+  declarations: [PagePrestationsComponent, ListPrestationsComponent, PrestationComponent, PageAddPrestationComponent, AddPrestationComponent, FormPrestationComponent, ReactiveFormPrestationComponent, DetailPrestationComponent, ClientDetailPrestationComponent, PageEditPrestationComponent, EditPrestationComponent],
   imports: [
     CommonModule,
     PrestationsRoutingModule,
