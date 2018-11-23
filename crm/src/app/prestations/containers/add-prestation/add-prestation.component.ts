@@ -24,6 +24,10 @@ export class AddPrestationComponent implements OnInit {
       // data est la réponse de l'api
       this.router.navigate(['prestations']);
     });
+    // this.ps.add(item).subscribe((data) => {
+    //   // data est la réponse de l'api
+    //   this.router.navigate(['prestations']);
+    // });
   }
 
 }

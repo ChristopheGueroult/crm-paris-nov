@@ -17,3 +17,7 @@
     </li>
   </ul>
 </nav>
+<p *ngIf="item$ | async as item">
+
+  {{ item.client }} selected
+</p>
